@@ -26,5 +26,14 @@
         URL2: sample.com
       ansible.builtin.debug:
         msg: "{{ URL2 }}"
+- name: Register variable
+  host2: localhost
+  tasks:
+    - name: Print get uptime of server
+      ansible.builtin.shell: uptime
+      register: OUT
+    - name: Print OUT variable
+      ansible.builtin.debug:
+        msg: "{{ OUT }}"
 
 
