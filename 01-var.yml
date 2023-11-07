@@ -12,6 +12,9 @@
 
 - name: Demo on Task variables
   hosts: localhost
+  vars:
+    URL1: Example1.com
+    URL2: Example2.com
   tasks:
     - name: Print URL1 variable
       vars:
