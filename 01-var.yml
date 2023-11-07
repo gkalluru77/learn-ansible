@@ -1,0 +1,12 @@
+- name: Demo on variables
+  hosts: all
+  vars:
+    URL: sample.com
+  tasks:
+    - name: Print URL variable
+      ansible.bulitin.debug:
+        msg: "{{ URL }}"
+
+# value start with variable, like msg: {{ URL }} then quotes are needed, if t does not start with variable like
+#msg: Hello {{ URL }} then quotes are not needed
+
