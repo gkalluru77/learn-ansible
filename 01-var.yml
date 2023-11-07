@@ -14,12 +14,13 @@
   hosts: localhost
   tasks:
     - name: Print URL1 variable
+      vars:
+        URL1: sample.com
       ansible.builtin.debug:
         msg: "{{ URL1 }}"
-        vars:
-          URL1: sample.com
-    - name: Print URL2 variable
+      - name: Print URL2 variable
+      vars:
+        URL2: sample.com
       ansible.builtin.debug:
         msg: "{{ URL2 }}"
-        vars:
-          URL2: sample.com
+
