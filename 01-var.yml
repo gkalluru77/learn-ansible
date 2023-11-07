@@ -31,9 +31,9 @@
   tasks:
     - name: Print get uptime of server
       ansible.builtin.shell: uptime
-      register: OUT
+      register: OUT1
     - name: Print OUT variable
       ansible.builtin.debug:
-        msg: "{{ OUT }}"
+        msg: "{{ OUT1 }}"
 
 
