@@ -7,5 +7,9 @@
     - name: Print Unix
       ansible.builtin.debug:
        msg: Hello Unix
+    - name: Print Windows
+      ansible.builtin.debug:
+        msg: Hello Windows
+
 
 
